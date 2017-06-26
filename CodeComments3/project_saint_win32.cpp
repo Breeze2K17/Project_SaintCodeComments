@@ -163,7 +163,7 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		                                   //of the upper-left corner of the rectangle to be filled
 		   int YLeft = ps.rcPaint.top;    //The y-coordinate, in logical units, 
 		   				   //of the upper-left corner of the rectangle to be filled.
-                   int Width = ps.rcPaint.right - ps.rcPaint.left; //Width of Window
+                   int Width = ps.rcPaint.right - ps.rcPaint.left; //Width of Application Window
 		   int Height = ps.rcPaint.bottom -ps.rcPaint.top; //Height of window
 		   PatBlt(
 				 hdc,
