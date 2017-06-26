@@ -159,16 +159,18 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		// The PatBlt function paints the specified rectangle using the brush that is currently selected 
 		// into the specified device context. 
 		// The brush color and the surface color or colors are combined by using the specified raster operation.
-		   int nXLeft = ps.rcPaint.left;   //Left of window
-		   int nYLeft = ps.rcPaint.top;    //Right of window
-                   int nWidth = ps.rcPaint.right - ps.rcPaint.left; //Width of Window
-		   int nHeight = ps.rcPaint.bottom -ps.rcPaint.top; //Height of window
+		   int XLeft = ps.rcPaint.left;   //The x-coordinate, in logical units, 
+		                                   //of the upper-left corner of the rectangle to be filled
+		   int YLeft = ps.rcPaint.top;    //The y-coordinate, in logical units, 
+		   				   //of the upper-left corner of the rectangle to be filled.
+                   int Width = ps.rcPaint.right - ps.rcPaint.left; //Width of Window
+		   int Height = ps.rcPaint.bottom -ps.rcPaint.top; //Height of window
 		   PatBlt(
 				 hdc,
-				 nXLeft,
-				 nYLeft,
-				 nWidth,
-				 nHeight,
+				 XLeft,
+				 YLeft,
+				 Width,
+				 Height,
 				 WHITENESS
 			 );
 		// We are not writing text to the client area anymore
